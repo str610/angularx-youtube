@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, AfterContentInit, Renderer2, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, AfterViewInit, Renderer2, Output, EventEmitter } from '@angular/core';
 
 import { YoutubeApiService } from './youtube.api.service';
 import { YoutubePlayerService } from './youtube.player.service';
@@ -7,7 +7,7 @@ import { YoutubePlayerService } from './youtube.player.service';
 	selector: 'youtube-component',
 	template: '<div id="playerElement"></div>'
 })
-export class YoutubeComponent implements AfterContentInit {
+export class YoutubeComponent implements AfterViewInit {
 
 	@Input() videoId: string;
 
@@ -25,7 +25,7 @@ export class YoutubeComponent implements AfterContentInit {
 		this.youtubeApi.loadApi();
 	}
 
-	ngAfterContentInit() {
+	ngAfterViewInit() {
 		const elementId = 'playerId',
 		elementContainer = this.renderer.selectRootElement('#playerElement')
 		this.renderer.setAttribute(elementContainer, 'id', elementId);
