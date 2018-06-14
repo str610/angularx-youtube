@@ -17,7 +17,7 @@
     "package": "rollup -c",
     "minify": "./node_modules/uglify-js/bin/uglifyjs dist/bundles/angularx-youtube.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/angularx-youtube.umd.min.js",
     "copy": "cpx './package-dist.json' dist && renamer --find 'package-dist.json' --replace 'package.json' ./dist/*",
-    "build": "npm run clean && npm run transpile && npm run package && npm run minify && npm run copy"
+    "build": "npm run clean && npm run transpile && npm run package && npm run minify && npm run copy && mv ./dist/* ./"
   },
   "license": "MIT",
   "homepage": "https://bitbucket.org/EdwardPayton/angularx-youtube",
