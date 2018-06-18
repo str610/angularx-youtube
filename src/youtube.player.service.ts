@@ -32,6 +32,7 @@ export class YoutubePlayerService {
 			width: config.width,
 			height: config.height,
 			videoId: config.videoId,
+			playerVars: { autoplay: config.autoplay, controls: config.controls },
 			events: {
 			onReady: (event: any) => {
 				config.outputs.ready(event.target);
