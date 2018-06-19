@@ -13,7 +13,7 @@ export class YoutubeComponent implements AfterViewInit {
 	@Input() width: number | string;
 	@Input() height: number | string;
 	@Input() autoplay: boolean;
-	@Input() contorls: boolean;
+	@Input() controls: boolean;
 	
 	@Output() ready = new EventEmitter<YT.Player>();
 	@Output() change = new EventEmitter<YT.PlayerEvent>();
@@ -39,7 +39,7 @@ export class YoutubeComponent implements AfterViewInit {
 			width: this.width || 300,
 			height: this.height || 200,
 			autoplay: this.autoplay,
-			contorls: this.controls,
+			controls: this.controls,
 			videoId: '',
 			outputs: {
 				ready: this.onReady.bind(this),
