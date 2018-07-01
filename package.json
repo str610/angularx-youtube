@@ -26,6 +26,9 @@
 	"bugs": {
 		"url": ""
 	},
+	"dependencies": {
+		"@types/youtube": "0.0.31"
+	},
 	"peerDependencies": {
 		"@angular/common": "^5.0.0||^6.0.0",
 		"@angular/core": "^5.0.0||^6.0.0",
